@@ -7555,6 +7555,14 @@ EditorNode::EditorNode() {
 	// Scene: Top left.
 	editor_dock_manager->add_dock(SceneTreeDock::get_singleton(), TTR("Scene"), EditorDockManager::DOCK_SLOT_LEFT_UR, nullptr, "PackedScene");
 
+	VBoxContainer *custom = memnew(VBoxContainer);
+	Label *label = memnew(Label);
+	label->set_text("newLable");
+	custom->add_child(label);
+	 editor_dock_manager->add_dock(custom, TTR("Scene"), EditorDockManager::DOCK_SLOT_LEFT_UR, nullptr, "PackedScene");
+
+	//editor_dock_manager->add_dock(SceneTreeDock::get_singleton(), TTR("Scene"), EditorDockManager::DOCK_SLOT_LEFT_UR, nullptr, "PackedScene");
+
 	// Import: Top left, behind Scene.
 	editor_dock_manager->add_dock(ImportDock::get_singleton(), TTR("Import"), EditorDockManager::DOCK_SLOT_LEFT_UR, nullptr, "FileAccess");
 
